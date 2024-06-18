@@ -1,5 +1,5 @@
 api/
-app/terraform/
+app/terraform/*
 app/trash.txt
 
 # Byte-compiled / optimized / DLL files
