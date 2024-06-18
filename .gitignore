@@ -2,7 +2,8 @@ api/
 app/terraform/*
 app/trash.txt
 app/04.sh
-
+app/e4-env/*
+arborescence.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

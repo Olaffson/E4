@@ -5,3 +5,6 @@ from django.http import HttpResponse
 
 def status_view(request):
     return HttpResponse("L'application est en ligne")
+
+def home(request):
+    return HttpResponse("E4 validé, bouya !")
