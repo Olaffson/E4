@@ -1,0 +1,8 @@
+*.sh
+terraform/
+__pycache__
+*.pyc
+.git
+.venv
+e4-env
+trash.txt

@@ -1,4 +1,5 @@
 api/
+tests/
 app/terraform/*
 app/trash.txt
 app/04.sh

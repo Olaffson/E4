@@ -1,7 +1,9 @@
-# E4
+# Projet E4 - Application Django
 
-Application web 
+Ce projet contient une application Django déployée sur Azure Container Instances (ACI) en utilisant Docker et Terraform.
 
-Lancez les différents scripts dans l'ordre pour lancer le projet.
-
-Le dernier script sert à détruire les ressources.
+Le dossier `app` contient plusieurs scripts qui permettent de gérer le projet :
+- `script_init` crée et lance l'environnement virtuel.  
+- `script_docker` crée le conteneur de l'application django `appweb` et le pousse sur dockerhub.  
+- `script_terraform_create` crée les ressources azures nécessaires au projet.  
+- `script_terraform_destroy` supprime les ressources azures
