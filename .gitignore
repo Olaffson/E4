@@ -5,6 +5,8 @@ app/trash.txt
 app/04.sh
 app/e4-env/
 arborescence.txt
+script_github.sh
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

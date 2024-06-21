@@ -4,5 +4,5 @@
 
 # Envoyer sur git
 git add .
-git commit -m "add dockerfile and static"
+git commit -m "Add CI workflow for pycodestyle, pytest, and coverage"
 git push origin main
