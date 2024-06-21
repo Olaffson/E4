@@ -35,6 +35,3 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),
 ]
-
-# if settings.DEBUG:
-#     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS[0])

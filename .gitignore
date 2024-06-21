@@ -1,9 +1,9 @@
 api/
-tests/
+trash/
 app/terraform/*
 app/trash.txt
 app/04.sh
-app/e4-env/*
+app/e4-env/
 arborescence.txt
 
 # Byte-compiled / optimized / DLL files
