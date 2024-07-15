@@ -4,5 +4,5 @@
 
 # Envoyer sur git
 git add .
-git commit -m "add update azure container"
+git commit -m "fix update azure container"
 git push origin main

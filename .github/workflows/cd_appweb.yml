@@ -58,7 +58,7 @@ jobs:
         docker push olaffsen/appweb:latest
 
     - name: Install Azure CLI
-      uses: azure/CLI@v1
+      uses: azure/setup-azure-cli@v1
 
     - name: Login to Azure
       uses: azure/login@v1
@@ -68,9 +68,11 @@ jobs:
     - name: Check if Azure Container Instance exists
       id: check_aci
       run: |
-        az container show --resource-group e4-rg --name e4aci --output none
-        echo "exists=true" >> $GITHUB_ENV
-      continue-on-error: true
+        if az container show --resource-group e4-rg --name e4aci --output none 2>/dev/null; then
+          echo "exists=true" >> $GITHUB_ENV
+        else
+          echo "exists=false" >> $GITHUB_ENV
+        fi
 
     - name: Update Azure Container Instance with new image
       if: env.exists == 'true'
