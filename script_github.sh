@@ -4,5 +4,5 @@
 
 # Envoyer sur git
 git add .
-git commit -m "Add CD workflow"
+git commit -m "fix spelling mistake"
 git push origin main
