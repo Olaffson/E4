@@ -12,4 +12,4 @@ def test_home(client):
     url = reverse('home')
     response = client.get(url)
     assert response.status_code == 200
-    assert b"Appweb E4" in response.content
+    assert b"AppWeb E4" in response.content
