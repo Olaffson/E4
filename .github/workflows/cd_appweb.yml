@@ -74,18 +74,18 @@ jobs:
           echo "exists=false" >> $GITHUB_ENV
         fi
 
-    - name: Update Azure Container Instance with new image
-      if: env.exists == 'true'
-      run: |
-        az container create \
-          --resource-group e4-rg \
-          --name e4aci \
-          --image olaffsen/appweb:latest \
-          --cpu 1 \
-          --memory 1.5 \
-          --ports 8000 \
-          --environment-variables DJANGO_SETTINGS_MODULE=appweb.settings \
-          --restart-policy OnFailure \
-          --registry-login-server index.docker.io \
-          --registry-username ${{ secrets.DOCKER_USERNAME }} \
-          --registry-password ${{ secrets.DOCKER_PASSWORD }}
+    # - name: Update Azure Container Instance with new image
+    #   if: env.exists == 'true'
+    #   run: |
+    #     az container create \
+    #       --resource-group e4-rg \
+    #       --name e4aci \
+    #       --image olaffsen/appweb:latest \
+    #       --cpu 1 \
+    #       --memory 1.5 \
+    #       --ports 8000 \
+    #       --environment-variables DJANGO_SETTINGS_MODULE=appweb.settings \
+    #       --restart-policy OnFailure \
+    #       --registry-login-server index.docker.io \
+    #       --registry-username ${{ secrets.DOCKER_USERNAME }} \
+    #       --registry-password ${{ secrets.DOCKER_PASSWORD }}
