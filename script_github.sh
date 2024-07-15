@@ -4,5 +4,5 @@
 
 # Envoyer sur git
 git add .
-git commit -m "fix spelling mistake"
+git commit -m "add update azure container"
 git push origin main
