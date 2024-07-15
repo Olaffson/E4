@@ -23,6 +23,6 @@ jobs:
 
     - name: Build and push Docker image
       run: |
-        docker build -t appweb .
+        docker build -t appweb ./app
         docker tag appweb olaffsen/appweb:latest
         docker push olaffsen/appweb:latest
