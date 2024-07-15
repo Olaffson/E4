@@ -29,6 +29,9 @@ jobs:
         pip install pycodestyle pytest pytest-cov
         pip install -r app/requirements.txt
 
+    - name: Set environment variable for Django settings
+      run: echo "DJANGO_SETTINGS_MODULE=appweb.settings" >> $GITHUB_ENV
+
     - name: Run pycodestyle
       run: |
         source venv/bin/activate
@@ -44,3 +47,6 @@ jobs:
       with:
         name: coverage-report
         path: htmlcov/
+  
+
+  

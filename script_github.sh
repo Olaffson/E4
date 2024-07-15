@@ -4,5 +4,5 @@
 
 # Envoyer sur git
 git add .
-git commit -m "Add CI workflow for pycodestyle, pytest, and coverage"
+git commit -m "Fix bug on CI workflow"
 git push origin main
