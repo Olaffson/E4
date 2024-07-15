@@ -32,8 +32,8 @@ jobs:
     - name: Set environment variable for Django settings
       run: |
         echo "DJANGO_SETTINGS_MODULE=appweb.settings" >> $GITHUB_ENV
-        echo "PYTHONPATH=$(pwd)/app" >> $GITHUB_ENV
-
+        echo "PYTHONPATH=$PYTHONPATH:$GITHUB_WORKSPACE/app/appweb" >> $GITHUB_ENV
+        
     - name: Run pycodestyle
       run: |
         source venv/bin/activate
