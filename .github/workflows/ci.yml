@@ -30,7 +30,9 @@ jobs:
         pip install -r app/requirements.txt
 
     - name: Set environment variable for Django settings
-      run: echo "DJANGO_SETTINGS_MODULE=appweb.settings" >> $GITHUB_ENV
+      run: |
+        echo "DJANGO_SETTINGS_MODULE=appweb.settings" >> $GITHUB_ENV
+        echo "PYTHONPATH=$(pwd)/app" >> $GITHUB_ENV
 
     - name: Run pycodestyle
       run: |
