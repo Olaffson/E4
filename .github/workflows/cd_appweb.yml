@@ -58,7 +58,7 @@ jobs:
         docker push olaffsen/appweb:latest
 
     - name: Install Azure CLI
-      uses: azure/setup-azure-cli@v1
+      uses: Azure/CLI@v1
 
     - name: Login to Azure
       uses: azure/login@v1
