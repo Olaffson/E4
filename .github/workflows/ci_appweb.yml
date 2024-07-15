@@ -1,4 +1,4 @@
-name: CI
+name: CI appweb
 
 on:
   push:
@@ -33,7 +33,7 @@ jobs:
       run: |
         echo "DJANGO_SETTINGS_MODULE=appweb.settings" >> $GITHUB_ENV
         echo "PYTHONPATH=$PYTHONPATH:$GITHUB_WORKSPACE/app/appweb" >> $GITHUB_ENV
-        
+
     - name: Run pycodestyle
       run: |
         source venv/bin/activate

@@ -4,5 +4,5 @@
 
 # Envoyer sur git
 git add .
-git commit -m "Fix bug on CI workflow"
+git commit -m "Add CD workflow"
 git push origin main
