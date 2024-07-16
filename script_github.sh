@@ -4,5 +4,5 @@
 
 # Envoyer sur git
 git add .
-git commit -m "fix auth"
+git commit -m "fix tests"
 git push origin main
