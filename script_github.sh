@@ -4,5 +4,5 @@
 
 # Envoyer sur git
 git add .
-git commit -m "add 404 page"
+git commit -m "add monitoring"
 git push origin main

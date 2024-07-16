@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
+# import appweb.opentelemetry_setup as opentelemetry_setup
 from pathlib import Path
 import os
 
@@ -24,9 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-1$rzzo!j)jqg=4k_vj#rrq8p@v2va(o+4)q@dg(^qo5h7r%=^+'  # noqa: E501
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['*', 'localhost', '0.0.0.0']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -123,7 +124,7 @@ STATIC_URL = os.environ.get("DJANGO_STATIC_URL", "/static/")
 
 # Répertoires où Django va rechercher les fichiers statiques supplémentaires
 STATIC_ROOT = os.environ.get("DJANGO_STATIC_ROOT", BASE_DIR / 'static')
-STATICFILES_STORAGE = ('whitenoise.storage.CompressedStaticFilesStorage')
+# STATICFILES_STORAGE = ('whitenoise.storage.CompressedStaticFilesStorage')
 
 # Nouvelle configuration STORAGES
 STORAGES = {
@@ -144,11 +145,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 LOGIN_URL = '/login/'
-
-# MONITORING = os.getenv('MONITORING', 'True') == 'True'
-
-# if MONITORING:
-#     try:
-#         import appweb.opentelemetry_setup
-#     except ImportError as e:
-#         raise ImportError(f"Failed to import OpenTelemetry setup: {e}")
