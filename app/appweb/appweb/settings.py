@@ -123,7 +123,7 @@ STATIC_URL = os.environ.get("DJANGO_STATIC_URL", "/static/")
 
 # Répertoires où Django va rechercher les fichiers statiques supplémentaires
 STATIC_ROOT = os.environ.get("DJANGO_STATIC_ROOT", BASE_DIR / 'static')
-# STATICFILES_STORAGE = ('whitenoise.storage.CompressedStaticFilesStorage')
+STATICFILES_STORAGE = ('whitenoise.storage.CompressedStaticFilesStorage')
 
 # Nouvelle configuration STORAGES
 STORAGES = {
@@ -144,3 +144,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 LOGIN_URL = '/login/'
+
+# MONITORING = os.getenv('MONITORING', 'True') == 'True'
+
+# if MONITORING:
+#     try:
+#         import appweb.opentelemetry_setup
+#     except ImportError as e:
+#         raise ImportError(f"Failed to import OpenTelemetry setup: {e}")
