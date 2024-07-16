@@ -4,5 +4,5 @@
 
 # Envoyer sur git
 git add .
-git commit -m "fix tests"
+git commit -m "fix bdd"
 git push origin main

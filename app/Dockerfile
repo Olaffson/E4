@@ -17,6 +17,10 @@ COPY requirements.txt /app/requirements.txt
 # Installer les dépendances
 RUN pip install --no-cache-dir -r requirements.txt
 
+# Sqlite
+RUN python manage.py makemigrations
+RUN python manage.py migrate
+
 # Exposer le port sur lequel l'application va écouter
 EXPOSE 8000
 
