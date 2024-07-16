@@ -41,7 +41,7 @@
     <!-- Contenu de la page -->
     <div class="container mt-4">
         {% if user.is_authenticated %}
-        <h1>AppWeb E4</h1>
+        <h1>Bonjour, {{ user.username }}</h1>
         <img src="{% static 'appweb/image.jpeg' %}" alt="Image" class="img-fluid">
         {% else %}
         <h2>Please log in to see the content</h2>
