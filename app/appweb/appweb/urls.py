@@ -15,16 +15,6 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
-# from django.contrib import admin
-# from django.urls import path
-# from .views import home
-
-# urlpatterns = [
-#     path('admin/', admin.site.urls),
-#     path('', home, name='home'),
-# ]
-
-
 from django.contrib import admin
 from django.urls import path
 from django.conf import settings
@@ -33,6 +23,7 @@ from django.contrib.auth.views import LogoutView
 from .views import CustomLoginView
 from .views import SignUpView
 from .views import home
+from django.conf.urls import handler404
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -41,3 +32,5 @@ urlpatterns = [
     path('signup/', SignUpView.as_view(), name='signup'),
     path('logout/', LogoutView.as_view(), name='logout'),
 ]
+
+handler404 = 'appweb.views.custom_404_view'
