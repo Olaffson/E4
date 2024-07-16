@@ -4,5 +4,5 @@
 
 # Envoyer sur git
 git add .
-git commit -m "add login and signup"
+git commit -m "fix auth"
 git push origin main
